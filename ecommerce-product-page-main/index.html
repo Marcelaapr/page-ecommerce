@@ -9,10 +9,18 @@
   <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
-  
   <title>Ecommerce</title>
 </head>
 <style>
+  :root {
+        --very-dark-blue: hsl(220, 13%, 13%);
+        --grayish-blue: hsl(220, 14%, 75%);
+        --light-grayish-blue: hsl(223, 64%, 98%);
+        --white: hsl(0, 0%, 100%);
+        --menu-color: hsl(219, 9%, 45%);
+        --orange: hsl(26, 100%, 55%);
+        --pale-orange: hsl(25, 100%, 94%);
+      }
 
   *{
     margin: 0;
@@ -56,19 +64,29 @@
     align-items: center;
   }
 
+  .container_corpo{
+    width: 100%;
+    display: flex;
+  }
+
   #imageAvatar {
     max-width: 45px;
     margin-left: 01.75rem;
   }
 
+  .imagesSneakers {
+   margin-left: 10%;
+  }
+    
   #ImageSneaker {
     max-width: 450px;
     border-radius: 12px;
     margin-bottom: 2rem;
+    margin-top: 4rem;    
   }
   
   .groupImages img {
-    max-width: 80px;
+    max-width: 88px;
     border-radius: 10px;
   }
 
@@ -76,6 +94,62 @@
     display: flex;
     gap: 2rem;
   }
+  
+  .descriptionProduct {    
+    align-items: left;
+    margin-top: 10%;
+    margin-left: 10%;
+    width: 450px;
+  }
+
+   .titulo p {
+    color: var(--orange);
+    font-size: 16px;
+   }
+
+   .texto p {
+    margin-top: 8%;
+   }
+
+   #geral{
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+   }
+   
+   .valorreal h1 {
+    margin-top: 8%;
+    font-size: 35px;
+    }
+
+   .desconto {
+    text-align: center;
+    background-color: var(--pale-orange);
+    color: var(--orange);
+    width: 3rem;
+    padding: 3px;
+    border-radius: 4px;
+   }
+
+   .preco2 {
+    color: var(--grayish-blue);    
+    margin-bottom: 2rem;
+   }
+
+   .contador {
+    height: 50px;
+    width: 150px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    background-color: #F0F0F0;
+    justify-content: space-around
+
+   
+    
+  
+   }
+
 
 
   </style>
@@ -96,7 +170,8 @@
       </div>
     </header>
   </div>
-<div class="container" mt-5>
+
+<div class="container_corpo" mt-5>
   <div class="imagesSneakers">
     <img src="./images/image-product-1.jpg" alt="" id="ImageSneaker">
     <div class="groupImages">
@@ -106,9 +181,46 @@
       <img src="images/image-product-4-thumbnail.jpg" alt="">
     </div>
   </div>
+
   <div class="descriptionProduct">
+        <div class="titulo">
+          <p>SNAKER COMPANY</p>
+          <h1>Fall Limited Edition Sneakeres</h1>
+        </div>
+
+        <div class="texto">
+          <p>These low-profile sneakers are your perfect casual wear companion. Featuring a durable rubber outer sole, they'll withstand everything the weather can offer.
+          </p>
+        </div>   
+        <br/>
+      <div class="valores" id="geral">
+          <div class="valorreal">
+            <h1><strong>$125.00</strong></h1>
+          </div>
+          <div class="desconto">
+            <p><strong>50%</strong></p>
+          </div> 
+      </div>
+
+      <div>
+        <p class="preco2"><s>$250.00</s></p>
+        
+      </div>
+      
+      <div class="contador">
+        <button id="diminui">-</button>
+        <span id="quant">0</span>
+        <button id="aumenta">+</button>
+      </div>
+
+      <div id="addtocart">
+        <img src="images/icon-cart.svg" alt="icon cart">
+        <span>Add to cart</span>
+      </div>
+      
 
   </div>
+
 </div>
 </body>
 </html>
